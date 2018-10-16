@@ -83,19 +83,19 @@
                         Command="{Binding LoginCommand}"
                         HeightRequest="46"
                         HorizontalOptions="FillAndExpand"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
                         Text="Login"
                         TextColor="White">
                     </Button>
-                    <!--IsEnabled="{Binding IsEnabled, Mode=TwoWay}"-->
                     <Button
                         BackgroundColor="Purple"
                         BorderRadius="23"
                         HeightRequest="46"
                         HorizontalOptions="FillAndExpand"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
                         Text="Register"
                         TextColor="White">
                     </Button>
-                    <!--IsEnabled="{Binding IsEnabled, Mode=TwoWay}"-->
                 </StackLayout>
                 <StackLayout
                     HorizontalOptions="Center"

@@ -11,11 +11,32 @@
             get;
             set;
         }
+        public LandsViewModel Lands
+        {
+            get;
+            set;
+        }
         #endregion
         #region Constructors
         public MainViewModel()
         {
+            instance = this; //Cuando carga el constructor se le asigna esa instancia
             this.Login = new LoginViewModel();
+        }
+        #endregion
+
+        #region Singleton
+        //Patron de diseño singleton para manejar una solo instancia en todo el tiempo de ejecución
+        private static MainViewModel instance;
+
+        public static MainViewModel GetInstance()
+        {
+            if (instance == null)
+            {
+                return new MainViewModel();
+            }
+
+            return instance;
         }
         #endregion
     }
