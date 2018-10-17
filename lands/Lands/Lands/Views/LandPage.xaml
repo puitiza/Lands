@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Lands.Views.LandPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
+              Icon="ic_action_info"
              Title="Information">
     <ContentPage.Content>
         <ScrollView
@@ -79,7 +80,7 @@
                     <Label
                         Grid.Column="0"
                         Grid.Row="4"
-                        Text="  AlphaCode3}"
+                        Text="AlphaCode3"
                         TextColor="Black">
                     </Label>
                     <Label
@@ -92,7 +93,7 @@
                     <Label
                         Grid.Column="0"
                         Grid.Row="5"
-                        Text="  Region}"
+                        Text="Region"
                         TextColor="Black">
                     </Label>
                     <Label
@@ -105,7 +106,7 @@
                     <Label
                         Grid.Column="0"
                         Grid.Row="6"
-                        Text="Subregion "
+                        Text="Subregion"
                         TextColor="Black">
                     </Label>
                     <Label
@@ -144,7 +145,7 @@
                     <Label
                         Grid.Column="0"
                         Grid.Row="9"
-                        Text="  NativeName}"
+                        Text="NativeName"
                         TextColor="Black">
                     </Label>
                     <Label
@@ -157,7 +158,7 @@
                     <Label
                         Grid.Column="0"
                         Grid.Row="10"
-                        Text="  NumericCode}"
+                        Text="NumericCode"
                         TextColor="Black">
                     </Label>
                     <Label
@@ -170,7 +171,7 @@
                     <Label
                         Grid.Column="0"
                         Grid.Row="11"
-                        Text="  CIOC}"
+                        Text="CIOC"
                         TextColor="Black">
                     </Label>
                     <Label
