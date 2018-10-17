@@ -21,7 +21,7 @@
         private ObservableCollection<LandItemViewModel> lands;
         private bool isRefreshing;
         private string filter;
-        private List<Land> landsList;
+        //private List<Land> landsList; esta misma propiedad lo voy a mover al MainViewModel para llamarlo desde cualquier interface
         #endregion
 
         #region Properties
@@ -89,7 +89,7 @@
                 return;
             }
 
-            this.landsList = (List<Land>)response.Result;
+            MainViewModel.GetInstance().LandList = (List<Land>)response.Result;
             this.Lands = new ObservableCollection<LandItemViewModel>(
                 this.ToLandItemViewModel());
             this.IsRefreshing = false;
@@ -101,7 +101,7 @@
         //Land para que pueda manejarlo.
         private IEnumerable<LandItemViewModel> ToLandItemViewModel()
         {
-            return this.landsList.Select(l => new LandItemViewModel
+            return MainViewModel.GetInstance().LandList.Select(l => new LandItemViewModel
             {
                 Alpha2Code = l.Alpha2Code,
                 Alpha3Code = l.Alpha3Code,

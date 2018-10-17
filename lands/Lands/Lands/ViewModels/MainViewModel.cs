@@ -1,8 +1,19 @@
 ﻿namespace Lands.ViewModels
 {
+    using System.Collections.Generic;
+    using Models;
+
     class MainViewModel
     {
         //Esta clase es el principal coordinador de los ViewModels y dentro de estos hacemos referencia a cada uno de los VieModels
+
+        #region Properties
+            public List<Land> LandList
+        {
+            get;
+            set;
+        }
+    	#endregion
 
         #region ViewModels
         //Dentro del ScrollView en LoginPage hay un BindingContext="{Binding Login} y este mismo nombre esta acá en el Main
@@ -22,6 +33,7 @@
             set;
         }
         #endregion
+
         #region Constructors
         public MainViewModel()
         {
